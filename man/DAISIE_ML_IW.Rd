@@ -105,9 +105,9 @@ solvers (steppers) are:
 \code{'odeint::runge_kutta_fehlberg78'} [default]
 \code{'odeint::runge_kutta_dopri5'}
 \code{'odeint::bulirsch_stoer'}
-without \code{odeint::}-prefix, \code{\link[deSolve]{ode}} method is
-assumed. The default method overall is: \code{"lsodes"} from
-\code{\link[deSolve]{ode}}.}
+without \code{odeint::}-prefix, The default method for CS is:
+\code{'odeint::runge_kutta_fehlberg78'}. \code{"lsodes"} from
+\code{\link[deSolve]{ode}} method is also available.}
 
 \item{optimmethod}{Method used in likelihood optimization. Default is
 "subplex" (see subplex package). Alternative is 'simplex' which was the
