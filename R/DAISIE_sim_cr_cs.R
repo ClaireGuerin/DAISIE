@@ -41,6 +41,7 @@ DAISIE_sim_cr_cs <- function(total_time,
         stac_vec <- unlist(full_list)[which(names(unlist(full_list)) == "stac")]
         present <- which(stac_vec != 0)
         number_present <- length(present)
+        message("number present ", number_present)
       }
       island_replicates[[rep]] <- full_list
       if (verbose == TRUE) {

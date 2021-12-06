@@ -33,6 +33,7 @@ DAISIE_sim_cr_iw <- function(total_time,
       stac_vec <- unlist(island_replicates)[which(names(unlist(island_replicates)) == "taxon_list.stac")]
       present <- which(stac_vec != 0)
       number_present <- length(present)
+      message("number present ", number_present)
     }
     if (verbose == TRUE) {
       print(paste("Island replicate ", rep, sep = ""))
