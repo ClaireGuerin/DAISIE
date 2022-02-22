@@ -20,12 +20,13 @@ The model can be fitted to both empirical dated phylogenies and simulated data.
 * Details and an overview of the maximum likelihood inference capabilities to estimate parameters see [here](https://cran.r-project.org/web/packages/DAISIE/vignettes/demo_optimize.html).
 * For details on comparing between two diversity depedence models see [here](https://cran.r-project.org/web/packages/DAISIE/vignettes/demo_CSvsIW.html).
 
+Want to know what's new? Head over to the [DAISIE news releases](doc/NEWS.md).
+
 ## Installing DAISIE
 
 **N.B.: MacOS users may experience issues when installing DAISIE, especially when on MacOS Big Sur. If that is you case, please see [here](doc/DAISIE_macOS.md) for detailed installation instructions.**
 
 The DAISIE package has a stable version on [CRAN](https://CRAN.R-project.org/package=DAISIE) and a development version on GitHub.
-
 
 ### From CRAN
 
@@ -34,6 +35,8 @@ From within R, do:
 ``` r
 install.packages("DAISIE")
 ```
+
+You may encounter difficulties with installing DAISIE due to your R version. If that is the case, follow the instructions [here](doc/UPDATE_R.md) before trying again.
 
 ### From GitHub
 
@@ -78,7 +81,7 @@ Remotes:
 
 ## Contributors
 
-`DAISIE` was originally developed by Rampal S. Etienne, Luis Valente, Albert B. Phillimore and Bart Haegeman. It is continuously maintained by members of the [@tece-lab](https://github.com/tece-lab), at the University of Groningen.
+`DAISIE` was originally developed by Rampal S. Etienne, Luis Valente, Albert B. Phillimore and Bart Haegeman. It is continuously maintained by members of the [@tece-lab](https://github.com/tece-lab), at the University of Groningen. If you are contributing to DAISIE, please follow our [guidelines](doc/CONTRIBUTING.md).
 
 ## References
 

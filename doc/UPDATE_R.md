@@ -16,7 +16,7 @@ Update your R version from `3.x` to `4.x` to be able to install DAISIE and all i
 From R or RStudio, use `installr`, the R package which helps install and update software on Windows.
 
 ```r
-install.packages("installr")
+install.packages("installr") # assuming it is not already installed
 library(installr)
 updateR()
 ```
@@ -25,7 +25,7 @@ updateR()
 From R or RStudio, use `updateR`, the R package which helps install and update software on Mac OS.
 
 ```r
-install.packages('devtools') #assuming it is not already installed
+install.packages('devtools') # assuming it is not already installed
 library(devtools)
 install_github('andreacirilloac/updateR')
 library(updateR)
