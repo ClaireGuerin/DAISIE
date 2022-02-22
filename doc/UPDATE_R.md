@@ -10,6 +10,26 @@ Error: package ‘DAISIE’ is not available (for R version 3.6.3) and could not
 
 Update your R version from `3.x` to `4.x` to be able to install DAISIE and all it dependencies.
 
+## Windows
+From R or RStudio, use `installr`, the R package which helps install and update software on Windows.
+
+```r
+install.packages("installr")
+library(installr)
+updateR()
+```
+
+## Mac OS
+From R or RStudio, use `updateR`, the R package which helps install and update software on Mac OS.
+
+```r
+install.packages('devtools') #assuming it is not already installed
+library(devtools)
+install_github('andreacirilloac/updateR')
+library(updateR)
+updateR(admin_password = 'Admin user password')
+```
+
 ## Ubuntu
 
 ### Step 1: Update R (from the terminal)
