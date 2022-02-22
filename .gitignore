@@ -16,3 +16,5 @@ src/*.gcno
 **/.DS_Store
 **/Rplots.pdf
 Meta
+.vscode
+testing.R
