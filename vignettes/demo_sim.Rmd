@@ -138,6 +138,4 @@ DAISIE_plot_sims(island_replicates_2types)
 ```                
 
 This produces a figure similar to Fig. 2, with three plots: 
-one for the total number of species,  one for species of type 1 and one for species of type 2. Accessing each island replicate 
- individually (e.g. island_replicates_2types[[15]]) shows information on branching times and 
- species-through-time tables for total, type 1 species and type 2 species.
+one for the total number of species,  one for species of type 1 and one for species of type 2. Accessing each island replicate individually (e.g. `island_replicates_2types[[10]]`) shows information on branching times and species-through-time tables for total, type 1 species and type 2 species.

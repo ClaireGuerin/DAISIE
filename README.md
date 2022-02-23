@@ -16,13 +16,9 @@ DAISIE is an `R` package that simulates and computes the (maximum) likelihood of
 
 The model can be fitted to both empirical dated phylogenies and simulated data.
 
-* For an overview of the simulation functionality see [here](https://cran.r-project.org/web/packages/DAISIE/vignettes/demo_sim.html).
-* Details and an overview of the maximum likelihood inference capabilities to estimate parameters see [here](https://cran.r-project.org/web/packages/DAISIE/vignettes/demo_optimize.html).
-* For details on comparing between two diversity depedence models see [here](https://cran.r-project.org/web/packages/DAISIE/vignettes/demo_CSvsIW.html).
+## Getting started
 
-Want to know what's new? Head over to the [DAISIE news releases](doc/NEWS.md).
-
-## Installing DAISIE
+### Installing DAISIE
 
 **N.B.: MacOS users may experience issues when installing DAISIE, especially when on MacOS Big Sur. If that is you case, please see [here](doc/DAISIE_macOS.md) for detailed installation instructions.**
 
@@ -47,6 +43,15 @@ install.packages("remotes")
 remotes::install_github("rsetienne/DAISIE")
 ```
 
+### Using DAISIE
+
+To get started with DAISIE's functionalities, read the vignettes by typing `browseVignettes("DAISIE")` in R.  
+* For an overview of the simulation functionality see [here](https://cran.r-project.org/web/packages/DAISIE/vignettes/demo_sim.html).
+* Details and an overview of the maximum likelihood inference capabilities to estimate parameters see [here](https://cran.r-project.org/web/packages/DAISIE/vignettes/demo_optimize.html).
+* For details on comparing between two diversity depedence models see [here](https://cran.r-project.org/web/packages/DAISIE/vignettes/demo_CSvsIW.html).
+
+For experienced users of DAISIE, to know what is new, head over to the [DAISIE news releases](doc/NEWS.md).
+
 ## Using DAISIE as a package dependency
 
 ### From CRAN
@@ -55,14 +60,14 @@ To your DESCRIPTION file, add `DAISIE` as any normal package.
 
 If your package directly uses `DAISIE`:
 
-```
+```yaml
 Imports:
   DAISIE
 ```
 
 If your package uses `DAISIE` in its peripherals (e.g. vignettes and tests):
 
-```
+```yaml
 Suggests:
   DAISIE
 ```
