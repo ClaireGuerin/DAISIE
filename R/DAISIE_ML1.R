@@ -156,7 +156,7 @@ DAISIE_ML1 <- function(
     df = NA,
     conv = NA
   )
-  out2err <- invisible(out2err)
+  out2err <- invisible(out2err) # return value can be assigned, but does not print when not assigned.
   idparseq <- c()
   if (eqmodel == 1 | eqmodel == 3 | eqmodel == 13) {
     idparseq <- 2
@@ -181,23 +181,28 @@ DAISIE_ML1 <- function(
     "prop_type2"
   )
 
+  # Log info parameters to optimize
+  cat("You are optimizing")
   if (length(namepars[idparsopt]) == 0) {
-    optstr <- "nothing"
+    cat("nothing", "\n")
   } else {
-    optstr <- namepars[idparsopt]
+    cat(namepars[idparsopt], "\n")
   }
 
-  cat("You are optimizing", optstr, "\n")
+  # Log info parameters to fix
+  cat("You are fixing")
   if (length(namepars[idparsfix]) == 0) {
-    fixstr <- "nothing"
+    cat("nothing", "\n")
   } else {
-    fixstr <- namepars[idparsfix]
+    cat(namepars[idparsfix], "\n")
   }
-  cat("You are fixing", fixstr, "\n")
-  if (sum(idparsnoshift %in% (6:10)) != 5) {
-    noshiftstring <- namepars[idparsnoshift]
+  
+  # Log info parameters to "shift"
+  if (sum(idparsnoshift %in% (6:10)) != 5) { # if there is at least 1 (type 2) parameter(s) to shift
+    noshiftstring <- namepars[idparsnoshift] # find the (type 2) parameters that will *not* be shifted
     cat("You are not shifting", noshiftstring, "\n")
   }
+
   idpars <- sort(c(idparsopt, idparsfix, idparsnoshift, idparseq))
   if (!any(idpars == 11)) {
     idpars <- c(idpars, 11)
