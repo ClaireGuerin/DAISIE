@@ -209,23 +209,28 @@ DAISIE_ML1 <- function(
     idparsfix <- c(idparsfix, 11)
     parsfix <- c(parsfix, 0)
   }
-  missnumspec <- unlist(lapply(datalist, function(list) {list$missing_species})) # nolint
+
+  # Error handling
+  missnumspec <- unlist(lapply(datalist, function(list) {list$missing_species})) # nolint, !drops NULL!
   if (sum(missnumspec) > (res - 1)) {
     cat(
       "The number of missing species is too large relative to the
         resolution of the ODE.\n")
     return(out2err)
   }
+
   if (length(idpars) != 11) {
     cat("You have too many parameters to be optimized or fixed.\n")
     return(out2err)
   }
+
   if ((prod(idpars == (1:11)) != 1) || # nolint
       (length(initparsopt) != length(idparsopt)) ||
       (length(parsfix) != length(idparsfix))) {
     cat("The parameters to be optimized and/or fixed are incoherent.\n")
     return(out2err)
   }
+  
   if (length(idparseq) == 0) {
   } else {
     if (ddmodel == 3) {
